@@ -9,6 +9,8 @@
   },
   "rules": {
     "no-console": false,
-    "ordered-imports": false
+    "ordered-imports": false,
+    "max-classes-per-file": false,
+    "no-string-literal": true
   }
 }
