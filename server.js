@@ -11,15 +11,25 @@ app.use(bodyParser.json());
 app.get('/api/hello', (req, res) => {
     const key = "query";
     const query = req.query[key];
-    setTimeout( () => res.send(`{"your query was":  "${query}" }`), 2000);
+
+    setTimeout( () => res.send(`{"your query was":  "${query}" }`), 5000);
 });
 
 app.get('/api/bye', (req, res) => {
-    setTimeout( () => res.send({ express: 'Good bye From Express' }), 400);
+    res.header("Content-Type", "text/cache-manifest");
+
+    setTimeout( () => res.status(200).send('{ "data": "test" }}}}}}') , 400);
 });
 
 app.get('/api/hi', (req, res) => {
-    setTimeout( () => res.send({ express: 'Good bye From Express' }), 300);
+    const sub = {
+
+        lastName: "Rybak",
+        name : "Vadym",
+        
+        
+    };
+    setTimeout( () => res.status(200).send(sub), 300);
 });
 
 app.listen(port);

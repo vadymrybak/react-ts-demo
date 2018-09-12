@@ -7,6 +7,9 @@ node server.js
 Start site
 npm start
 
+Generate types JSON
+typescript-json-schema ./Sub.ts ISub --required |sed 's/^{/export const JSub={/' > jsub.js
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

@@ -4,24 +4,34 @@
   "proxy": "http://localhost:5000",
   "private": true,
   "dependencies": {
+    "ajv": "^6.5.3",
     "express": "^4.16.3",
+    "gulp": "^3.9.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-scripts-ts": "2.17.0",
+    "reflec-ts": "^0.3.9",
+    "rx-dom": "^7.0.3",
     "rxjs": "^6.2.2",
-    "semantic-ui-react": "^0.82.3"
+    "semantic-ui": "^2.3.3",
+    "semantic-ui-react": "^0.82.3",
+    "ts-interface-checker": "^0.1.4",
+    "xml-js": "^1.6.7",
+    "yarn": "^1.9.4"
   },
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "eject": "react-scripts-ts eject",
+    "build-semantic": "cd node_modules/semantic-ui && gulp build-css build-assets"
   },
   "devDependencies": {
     "@types/jest": "^23.3.1",
     "@types/node": "^10.9.1",
     "@types/react": "^16.4.11",
     "@types/react-dom": "^16.0.7",
+    "ts-interface-builder": "^0.1.5",
     "typescript": "^3.0.1"
   }
 }

@@ -10,6 +10,9 @@ export default class FetchObservable {
         const promise = fetch(url)
         .then(response => { 
             if(response.ok) {
+                // const error2 = new NewError("aa");
+                // throw error2;
+                
                 return response.json();
             }
             else{
@@ -22,14 +25,14 @@ export default class FetchObservable {
                 });
             }
         })
-        .catch(error => {
-            console.error('Error:', error);
-            const error2 = new NewError(error);
-            error2.errorCode = 520;
-            error2.errorMessage = "Bad JSON";
-            error2.wasRedirected = false;
-            throw error2;
-        });
+        // .catch(error => {
+        //     console.error('Error:', error);
+        //     const error2 = new NewError(error);
+        //     error2.errorCode = 520;
+        //     error2.errorMessage = "Bad JSON";
+        //     error2.wasRedirected = false;
+        //     throw error2;
+        // });
         return from(promise);
     }
 }
